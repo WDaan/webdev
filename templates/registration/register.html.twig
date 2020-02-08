@@ -9,7 +9,10 @@
 <form>
 <div class="form-group">
     <div>
-        {{ form_errors(registrationForm)}}
+        {% if error %}
+            {# <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div> #}
+            <div class="alert alert-danger">{{ error }}</div>
+        {% endif %}
     </div>
     <div>
         <div>
