@@ -34,9 +34,11 @@
         <div class="col">
             <a class="btn btn-success" href="{{ path('post_edit', {'id': post.id}) }}">edit</a>
         </div>
+        {% if is_granted('ROLE_ADMIN') %}
         <div class="col">
             {{ include('post/_delete_form.html.twig') }}
         </div>
+        {% endif %}
     </div>
 
     <a style="margin-top: 30px;"  class="btn btn-primary" href="{{ path('post_index') }}">back to list</a>
