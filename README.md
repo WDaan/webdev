@@ -1,6 +1,6 @@
 
   
-# Vueshop
+# Symfony Messageboard
 
 This is a simple messageboard made with Symphony.
 
