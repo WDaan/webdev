@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Webdev!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="stylesheet" type="text/css" href="{{asset('build/app.css')}}">
+    </head>
+    <body>
+    <div class="content">
+        <div  class="navbar">
+	       <a href="/"> 
+                <span>Daan Wijns</span> 
+           </a>
+           <div class="right">
+                <a href="/" style="margin-right:10px"> 
+                    <span>Home</span> 
+                </a>
+                <a href="/login"> 
+                    <span>Login</span> 
+                 </a>
+           </div>
+        </div>
+        {% block body %}{% endblock %}
+        <script type="text/javascript" src="{{asset('build/app.js')}}"></script
+        {% block javascripts %}{% endblock %}
+    </div>
+    </body>
+</html>

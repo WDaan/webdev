@@ -1,0 +1,21 @@
+{{ form_start(form) }}
+<form>
+<div class="form-group">
+    <div>
+        {{ form_errors(form)}}
+    </div>
+    <div>
+        <div>
+            <label for="user">{{form_label(form.user)}}: </label>
+            {{form_widget(form.user, {'attr': {'class': 'form-control'}})}}
+        </div>
+        <div>
+            <label for="content">{{form_label(form.content)}}: </label>
+            {{form_widget(form.content, {'attr': {'class': 'form-control'}})}}
+        </div>
+    </div>
+</div>
+<button style="margin-top:30px;" class="btn btn-success">{{ button_label|default('Save') }}</button>
+{{ form_row(form._token) }}
+</form>
+{{ form_end(form, {'render_rest': false}) }}

@@ -1,0 +1,106 @@
+@import "~bootstrap/scss/bootstrap";
+
+html, body {
+    height: 100% !important;
+}
+
+body {
+	font-family: $font-family-sans-serif;
+	background: $body-bg;
+	padding: 0;
+	margin: 0;
+	font-size: 13px;
+    color: #484746;
+}
+
+a, a:hover {
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+}
+
+h1 {
+    font-size: 54px;
+}
+
+h2 {
+    font-size: 48px;
+    margin-top: 20px; 
+    margin-bottom:50px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 200;
+}
+
+.navbar {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  padding: 15px;
+  span {
+    font-size: 16px;
+    text-decoration: none;
+  }
+}
+.container {
+	width: 100%;
+}
+.content {
+    background-color: #f8fafc;
+    height: 100vh;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.panel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  padding: 15px;
+}
+
+.card {
+	&-row {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -8px;
+        margin-right: -8px;
+        margin-top: 50px;
+	}
+	&-item {
+		flex-grow: 1;
+		flex-basis: 33.33%;
+		max-width: 33.33%;
+		padding-left: 8px;
+		padding-right: 8px;
+		padding-top: 16px;
+	}
+	&-inner {
+        min-width: 180px;
+        padding: 20px;
+		background: #fff;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+	}
+	&-title {
+        font-size: 20px;
+		color: #5f6d84;
+	}
+	&-value {
+        height: 23px;
+        font-size: 15px !important;
+	}
+}
+
+.table-show {
+    max-width: 500px !important;
+    margin: 0 auto;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+label {
+    margin: 12px 0px 5px 0px;
+    font-size: 17px;
+    font-weight: 400;
+}
