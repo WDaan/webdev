@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    <h2>Register</h2>
+
+{{ form_start(registrationForm) }}
+<form>
+<div class="form-group">
+    <div>
+        {{ form_errors(registrationForm)}}
+    </div>
+    <div>
+        <div>
+            <label for="email">{{form_label(registrationForm.email)}}: </label>
+            {{form_widget(registrationForm.email, {'attr': {'class': 'form-control'}})}}
+        </div>
+        <div>
+            <label for="username">{{form_label(registrationForm.username)}}: </label>
+            {{form_widget(registrationForm.username, {'attr': {'class': 'form-control'}})}}
+        </div>
+        <div>
+            <label for="plainPassword">{{form_label(registrationForm.plainPassword)}}: </label>
+            {{form_widget(registrationForm.plainPassword, {'attr': {'class': 'form-control'}})}}
+        </div>
+        <div>
+            <label class="form-check-label" for="agreeTerms"> {{form_label(registrationForm.agreeTerms)}}: </label>
+            {{form_widget(registrationForm.agreeTerms, {'attr': {'class': 'form-check-label'}})}}
+        </div>
+    </div>
+        <button style="margin-top:30px" class="btn btn-success">Register</button>
+    </div>
+{{ form_row(registrationForm._token) }}
+</form>
+{{ form_end(registrationForm, {'render_rest': false}) }}
+{% endblock %}

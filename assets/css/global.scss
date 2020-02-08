@@ -58,6 +58,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .card {
+    margin-top: 20px !important;
 	&-row {
 		display: flex;
 		flex-wrap: wrap;
@@ -74,10 +75,11 @@ h1,h2,h3,h4,h5,h6 {
 		padding-top: 16px;
 	}
 	&-inner {
-        min-width: 180px;
+        min-width: 240px;
         padding: 20px;
 		background: #fff;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+        
 	}
 	&-title {
         font-size: 20px;

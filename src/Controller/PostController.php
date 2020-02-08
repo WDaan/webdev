@@ -47,6 +47,12 @@ class PostController extends AbstractController
 
             $entityManager->flush();
 
+            //check if logged in & redirect appropriatly
+
+            if ($this->isGranted('ROLE_USER') == false) { //not logged in
+                return $this->redirectToRoute('home');
+            }
+
             return $this->redirectToRoute('post_index');
         }
 

@@ -9,16 +9,30 @@
     <body>
     <div class="content">
         <div  class="navbar">
-	       <a href="/"> 
-                <span>Daan Wijns</span> 
-           </a>
+        {% if app.user %}
+                <span>Hi {{ app.user.username }}!</span> 
+        {% else %}
+            <span></span>
+        {% endif %}                
            <div class="right">
                 <a href="/" style="margin-right:10px"> 
                     <span>Home</span> 
                 </a>
-                <a href="/login"> 
+                {% if app.user %}
+                <a href="/post" style="margin-right:10px"> 
+                    <span>Manage</span> 
+                 </a>
+                 <a href="/logout" style="margin-right:10px"> 
+                    <span>Logout</span> 
+                 </a>
+                {% else %}
+                <a href="/login" style="margin-right:10px"> 
                     <span>Login</span> 
                  </a>
+                 <a href="/register" style="margin-right:10px"> 
+                    <span>Register</span> 
+                 </a>
+                 {% endif %}  
            </div>
         </div>
         {% block body %}{% endblock %}
